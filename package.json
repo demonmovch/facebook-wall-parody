@@ -1,6 +1,6 @@
 {
     "name": "react-online-intensive",
-    "version": "1.1.2",
+    "version": "1.2.0",
     "author": "Dima Vakatsiienko <d.vakatsiienko@lectrum.io>",
     "private": true,
     "scripts": {
@@ -24,7 +24,6 @@
     },
     "dependencies": {
         "classnames": "~2.2.6",
-        "git-repo-name": "~0.6.0",
         "gsap": "1.20.2",
         "moment": "~2.22.2",
         "react": "~16.4.1",
@@ -39,10 +38,11 @@
         "@babel/plugin-proposal-decorators": "~7.0.0-beta.52",
         "@babel/plugin-proposal-function-bind": "~7.0.0-beta.52",
         "@babel/plugin-proposal-object-rest-spread": "~7.0.0-beta.52",
-        "@babel/polyfill": "~7.0.0-beta.52",
+        "@babel/polyfill": "~7.0.0-beta.53",
         "@babel/preset-env": "~7.0.0-beta.52",
         "@babel/preset-react": "~7.0.0-beta.52",
         "@babel/register": "~7.0.0-beta.52",
+        "git-repo-name": "~0.6.0",
         "babel-core": "^7.0.0-0",
         "babel-eslint": "~8.2.5",
         "babel-jest": "~23.2.0",
