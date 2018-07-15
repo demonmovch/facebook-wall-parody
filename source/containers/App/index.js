@@ -15,7 +15,7 @@ export default class App extends Component {
                     fontSize:        24,
                     fontWeight:      '600',
                 } }>
-                Привет! Начало здесь!
+                Персональный проект: стартовая точка
             </h1>
         );
     }

@@ -43,7 +43,14 @@ export const loadImages = () => ({
 });
 
 export const setupFavicon = () => ({
-    plugins: [new FaviconsWebpackPlugin('./static/favicon/favicon.svg')],
+    plugins: [
+        new FaviconsWebpackPlugin({
+            logo:            './static/favicon/favicon.svg',
+            prefix:          'images/favicon/icon-[hash]',
+            statsFilename:   'iconstats-[hash].json',
+            persistentCache: true,
+        })
+    ],
 });
 
 export const setupHtml = () => ({
