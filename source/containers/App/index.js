@@ -2,10 +2,10 @@
 import React, { Component } from 'react';
 
 export default class App extends Component {
-    render () {
+    render() {
         return (
             <h1
-                style = { {
+                style = {{
                     display:         'flex',
                     justifyContent:  'center',
                     alignItems:      'center',
@@ -14,8 +14,8 @@ export default class App extends Component {
                     color:           'white',
                     fontSize:        24,
                     fontWeight:      '600',
-                } }>
-                Привет! Начало здесь.
+                }}>
+                Привет! Добро пожаловать!.
             </h1>
         );
     }
