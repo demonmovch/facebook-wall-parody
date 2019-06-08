@@ -5,15 +5,13 @@ import StatusBar from 'components/StatusBar';
 import Styles from './styles.m.css';
 
 export default class Feed extends Component {
-	render() {
-		const { currentUserFirstName, avatar } = this.props;
-
-		return (
-			<section className={Styles.feed}>
-				<StatusBar />
-				<Composer />
-				<Post />
-			</section>
-		);
-	}
+    render() {
+        return (
+            <section className={Styles.feed}>
+                <StatusBar />
+                <Composer />
+                <Post />
+            </section>
+        );
+    }
 }
