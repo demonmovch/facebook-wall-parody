@@ -5,18 +5,18 @@ import avatar from 'theme/assets/lisa';
 import { Provider } from 'components/HOC/withProfile';
 
 const options = {
-	avatar,
-	currentUserFirstName: 'Lisa',
-	currentUserLastName: 'Simpson'
+    avatar,
+    currentUserFirstName: 'Lisa',
+    currentUserLastName: 'Simpson'
 };
 
 @hot(module)
 export default class App extends Component {
-	render() {
-		return (
-			<Provider value={options}>
-				<Feed />
-			</Provider>
-		);
-	}
+    render() {
+        return (
+            <Provider value={options}>
+                <Feed />
+            </Provider>
+        );
+    }
 }
