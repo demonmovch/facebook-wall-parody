@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import Feed from 'components/Feed';
-import avatar from 'theme/assets/lisa';
+import avatar from 'theme/assets/koala';
 import { Provider } from 'components/HOC/withProfile';
 
 const options = {
     avatar,
-    currentUserFirstName: 'Lisa',
-    currentUserLastName: 'Simpson'
+    currentUserFirstName: 'какой-то',
+    currentUserLastName: 'чел',
 };
 
 @hot(module)
