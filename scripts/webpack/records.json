@@ -19,7 +19,7 @@
         "byName": {},
         "bySource": {},
         "usedIds": [
-          0
+          1
         ]
       }
     }
@@ -201,7 +201,13 @@
       "node_modules/babel-loader/lib/index.js??ref--4-0!source/index.js": 146,
       "node_modules/mini-css-extract-plugin/dist/loader.js!node_modules/css-loader/dist/cjs.js??ref--9-1!node_modules/postcss-loader/src/index.js??postcss!source/theme/init.css": 147,
       "node_modules/webpack/buildin/module.js": 148,
-      "node_modules/moment/locale sync /^\\.\\/.*$/": 149
+      "node_modules/moment/locale sync /^\\.\\/.*$/": 149,
+      "node_modules/prop-types/index.js": 144,
+      "node_modules/mini-css-extract-plugin/dist/loader.js!node_modules/css-loader/dist/cjs.js??ref--9-1!node_modules/postcss-loader/src/index.js??postcss!source/components/Spinner/styles.m.css": 145,
+      "node_modules/file-loader/dist/cjs.js??ref--6-0!node_modules/imagemin-webpack/src/imagemin-loader.js??ref--10!source/theme/assets/koala.jpg": 150,
+      "node_modules/babel-loader/lib/index.js??ref--4-0!source/components/Feed/index.js 07f933c6931003866668bda8c8bdbc1b": 151,
+      "node_modules/prop-types/factoryWithThrowingShims.js": 152,
+      "node_modules/prop-types/lib/ReactPropTypesSecret.js": 153
     },
     "usedIds": {
       "0": 0,
@@ -353,7 +359,11 @@
       "146": 146,
       "147": 147,
       "148": 148,
-      "149": 149
+      "149": 149,
+      "150": 150,
+      "151": 151,
+      "152": 152,
+      "153": 153
     }
   },
   "chunks": {
@@ -474,6 +484,29 @@
       "modules": {
         "byIdentifier": {
           "node_modules/css-loader/dist/cjs.js??ref--9-1!node_modules/postcss-loader/src/index.js??postcss!source/components/StatusBar/styles.m.css": 0,
+          "node_modules/css-loader/dist/runtime/api.js": 1
+        },
+        "usedIds": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--9-1!node_modules/postcss-loader/src/index.js??postcss!source/components/Spinner/styles.m.css": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/css-loader/dist/cjs.js??ref--9-1!node_modules/postcss-loader/src/index.js??postcss!source/components/Spinner/styles.m.css": 0,
           "node_modules/css-loader/dist/runtime/api.js": 1
         },
         "usedIds": {
