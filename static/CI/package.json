@@ -1,9 +1,0 @@
-{
-    "name": "lectrum-education",
-    "scripts": {
-      "start": "serve --single"
-    },
-    "dependencies": {
-      "serve": "latest"
-    }
-  }
