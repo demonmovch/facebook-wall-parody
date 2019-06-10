@@ -9,12 +9,12 @@ export default class Post extends Component {
         id: PropTypes.string.isRequired,
         comment: PropTypes.string.isRequired,
         created: PropTypes.number.isRequired,
-        _deletePost: PropTypes.func.isRequired,
+        _removePost: PropTypes.func.isRequired,
     };
 
-    _deletePost = () => {
-        const { id, _deletePost } = this.props;
-        _deletePost(id);
+    _removePost = () => {
+        const { id, _removePost } = this.props;
+        _removePost(id);
     };
 
     render() {
@@ -24,7 +24,7 @@ export default class Post extends Component {
             <Consumer>
                 {context => (
                     <section className={Styles.post}>
-                        <button onClick={this._deletePost} />
+                        <button onClick={this._removePost} />
                         <img src={context.avatar} />
                         <a>{`${context.currentUserFirstName} ${context.currentUserLastName}`}</a>
                         <time>{moment.unix(created).format('MMMM D h:mm:ss a')}</time>

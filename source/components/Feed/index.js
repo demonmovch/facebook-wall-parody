@@ -9,17 +9,17 @@ import { getUniqueID } from 'instruments';
 
 export default class Feed extends Component {
     state = {
-        isSpinning: true,
+        isSpinning: false,
         posts: [
             { id: '123', comment: 'Hi there!', created: 1526825076849 },
             { id: '456', comment: 'Hello!', created: 1526825076900 },
         ],
     };
-    _deletePost = id => {
-        const { posts } = this.state;
-        const newPosts = posts.filter(post => post.id !== id);
-        this.setState({
-            posts: [...newPosts],
+
+    _removePost = id => {
+        this.setState(({ posts }) => {
+            const newPosts = posts.filter(post => post.id !== id);
+            return { posts: [...newPosts] };
         });
     };
 
@@ -38,7 +38,7 @@ export default class Feed extends Component {
     render() {
         const { posts, isSpinning } = this.state;
         const postJSX = posts.map(post => {
-            return <Post key={post.id} {...post} _deletePost={this._deletePost} />;
+            return <Post key={post.id} {...post} _removePost={this._removePost} />;
         });
 
         return (
