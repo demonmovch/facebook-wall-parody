@@ -20,25 +20,23 @@ export default () => {
     return merge(
         {
             output: {
-                path:          BUILD,
-                filename:      IS_DEVELOPMENT ? '[name].js' : `js/${CHUNK_NAME_JS}`,
-                chunkFilename: IS_DEVELOPMENT
-                    ? '[name].js'
-                    : `js/${CHUNK_NAME_JS}`,
+                path: BUILD,
+                filename: IS_DEVELOPMENT ? '[name].js' : `js/${CHUNK_NAME_JS}`,
+                chunkFilename: IS_DEVELOPMENT ? '[name].js' : `js/${CHUNK_NAME_JS}`,
                 hashDigestLength: 5,
-                publicPath:       '/',
+                /*publicPath:       '/',*/
             },
             optimization: {
                 nodeEnv: NODE_ENV,
             },
             resolve: {
-                extensions: [ '.js', '.json', '.css', '.jpg', '.png' ],
-                modules:    [ SOURCE, 'node_modules' ],
+                extensions: ['.js', '.json', '.css', '.jpg', '.png'],
+                modules: [SOURCE, 'node_modules'],
             },
         },
         defineEnvVariables({
-            __ENV__:  JSON.stringify(NODE_ENV),
-            __DEV__:  IS_DEVELOPMENT,
+            __ENV__: JSON.stringify(NODE_ENV),
+            __DEV__: IS_DEVELOPMENT,
             __PROD__: !IS_DEVELOPMENT,
         }),
         connectHtml(),
@@ -46,6 +44,6 @@ export default () => {
         loadFonts(),
         loadImages(),
         loadSvg(),
-        connectContextReplacement(),
+        connectContextReplacement()
     );
 };
