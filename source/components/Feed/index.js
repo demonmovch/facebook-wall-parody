@@ -38,7 +38,9 @@ export default class Feed extends Component {
     render() {
         const { posts, isSpinning } = this.state;
         const postJSX = posts.map(post => {
-            return <Post key={post.id} {...post} _removePost={this._removePost} />;
+            return (
+                <Post key={post.id} {...post} _removePost={this._removePost} />
+            );
         });
 
         return (
