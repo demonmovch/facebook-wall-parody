@@ -6,14 +6,14 @@ module.exports = {
         ecmaFeatures: {
             impliedStrict: true,
             jsx: true,
-            legacyDecorators: true,
-        },
+            legacyDecorators: true
+        }
     },
     env: {
         browser: true,
         node: true,
         jest: true,
-        es6: true,
+        es6: true
     },
     globals: {
         __ENV__: false,
@@ -26,13 +26,13 @@ module.exports = {
         React: false,
         shallow: false,
         render: false,
-        mount: false,
+        mount: false
     },
     plugins: ['react', 'jest', 'babel', 'flowtype', 'react-hooks'],
     settings: {
         react: {
-            version: '16.6.1',
-        },
+            version: '16.6.1'
+        }
     },
     rules: {
         'linebreak-style': 0,
@@ -41,8 +41,8 @@ module.exports = {
         'jest/consistent-test-it': [
             2,
             {
-                fn: 'test',
-            },
+                fn: 'test'
+            }
         ],
         'jest/lowercase-name': 2,
         'jest/no-disabled-tests': 2,
@@ -51,8 +51,8 @@ module.exports = {
         'jest/no-large-snapshots': [
             2,
             {
-                maxSize: 10,
-            },
+                maxSize: 10
+            }
         ],
         'jest/no-test-prefixes': 2,
         'jest/no-jest-import': 2,
@@ -96,10 +96,10 @@ module.exports = {
                         'getSnapshotBeforeUpdate',
                         'componentDidUpdate',
                         'componentWillUnmount',
-                        'componentDiddCatch',
-                    ],
-                },
-            },
+                        'componentDiddCatch'
+                    ]
+                }
+            }
         ],
         'react/jsx-boolean-value': 2,
         'react/jsx-curly-spacing': [2, 'always'],
@@ -119,8 +119,8 @@ module.exports = {
             2,
             {
                 nonEmpty: 'after-props',
-                selfClosing: 'tag-aligned',
-            },
+                selfClosing: 'tag-aligned'
+            }
         ],
         'react/jsx-closing-tag-location': 2,
         'react/jsx-sort-props': [
@@ -128,8 +128,8 @@ module.exports = {
             {
                 callbacksLast: true,
                 shorthandFirst: true,
-                shorthandLast: false,
-            },
+                shorthandLast: false
+            }
         ],
         'react/jsx-wrap-multilines': [
             2,
@@ -140,20 +140,20 @@ module.exports = {
                 arrow: 'parens-new-line',
                 condition: 'ignore',
                 logical: 'ignore',
-                prop: 'ignore',
-            },
+                prop: 'ignore'
+            }
         ],
         'for-direction': 2,
         'getter-return': [
             2,
             {
-                allowImplicit: false,
-            },
+                allowImplicit: false
+            }
         ],
         'no-await-in-loop': 0,
         'no-compare-neg-zero': 2,
         'no-cond-assign': [2, 'always'],
-        'no-console': 0,
+        'no-console': 2,
         'no-constant-condition': 2,
         'no-control-regex': 2,
         'no-debugger': 2,
@@ -167,8 +167,8 @@ module.exports = {
             2,
             'all',
             {
-                ignoreJSX: 'all',
-            },
+                ignoreJSX: 'all'
+            }
         ],
         'no-extra-semi': 2,
         'no-func-assign': 2,
@@ -211,8 +211,8 @@ module.exports = {
         'no-implicit-coercion': [
             2,
             {
-                allow: ['!!'],
-            },
+                allow: ['!!']
+            }
         ],
         'no-implicit-globals': 2,
         'no-implied-eval': 2,
@@ -231,8 +231,8 @@ module.exports = {
         'no-redeclare': [
             2,
             {
-                builtinGlobals: true,
-            },
+                builtinGlobals: true
+            }
         ],
         'no-restricted-properties': 2,
         'no-return-assign': [2, 'except-parens'],
@@ -241,8 +241,8 @@ module.exports = {
         'no-self-assign': [
             2,
             {
-                props: true,
-            },
+                props: true
+            }
         ],
         'no-self-compare': 2,
         'no-sequences': 2,
@@ -284,24 +284,24 @@ module.exports = {
         'array-bracket-newline': [
             2,
             {
-                multiline: true,
-            },
+                multiline: true
+            }
         ],
         'array-bracket-spacing': [
             2,
             'always',
             {
                 arraysInArrays: false,
-                objectsInArrays: false,
-            },
+                objectsInArrays: false
+            }
         ],
         'block-spacing': 2,
         'brace-style': [
             2,
             '1tbs',
             {
-                allowSingleLine: true,
-            },
+                allowSingleLine: true
+            }
         ],
         camelcase: 0,
         'comma-dangle': [
@@ -311,15 +311,15 @@ module.exports = {
                 objects: 'always-multiline',
                 functions: 'always-multiline',
                 imports: 'always-multiline',
-                exports: 'always-multiline',
-            },
+                exports: 'always-multiline'
+            }
         ],
         'comma-spacing': [
             2,
             {
                 before: false,
-                after: true,
-            },
+                after: true
+            }
         ],
         'comma-style': [2, 'last'],
         'computed-property-spacing': [2, 'always'],
@@ -332,8 +332,8 @@ module.exports = {
             2,
             'declaration',
             {
-                allowArrowFunctions: true,
-            },
+                allowArrowFunctions: true
+            }
         ],
         'function-paren-newline': [2, 'consistent'],
         'id-blacklist': [2, 'e', 'err', 'evt', 'cb'],
@@ -343,8 +343,8 @@ module.exports = {
             2,
             4,
             {
-                SwitchCase: 1,
-            },
+                SwitchCase: 1
+            }
         ],
         'jsx-quotes': [2, 'prefer-single'],
         'key-spacing': [
@@ -352,16 +352,16 @@ module.exports = {
             {
                 beforeColon: false,
                 afterColon: true,
-                align: 'value',
-            },
+                align: 'value'
+            }
         ],
         'keyword-spacing': 2,
         'lines-between-class-members': [
             'error',
             'always',
             {
-                exceptAfterSingleLine: true,
-            },
+                exceptAfterSingleLine: true
+            }
         ],
         'max-depth': 0,
         'max-len': [
@@ -372,8 +372,8 @@ module.exports = {
                 ignoreStrings: true,
                 ignoreUrls: true,
                 ignoreComments: true,
-                ignoreRegExpLiterals: true,
-            },
+                ignoreRegExpLiterals: true
+            }
         ],
         'max-nested-callbacks': [2, 4],
         'max-params': [2, 4],
@@ -381,8 +381,8 @@ module.exports = {
         'max-statements-per-line': [
             2,
             {
-                max: 1,
-            },
+                max: 1
+            }
         ],
         'new-parens': 2,
         'newline-per-chained-call': 2,
@@ -396,16 +396,16 @@ module.exports = {
             2,
             {
                 max: 2,
-                maxEOF: 1,
-            },
+                maxEOF: 1
+            }
         ],
         'no-nested-ternary': 2,
         'no-new-object': 2,
         'no-plusplus': [
             2,
             {
-                allowForLoopAfterthoughts: true,
-            },
+                allowForLoopAfterthoughts: true
+            }
         ],
         'no-restricted-syntax': [2, 'WithStatement'],
         'no-tabs': 2,
@@ -422,8 +422,8 @@ module.exports = {
             {
                 blankLine: 'always',
                 prev: '*',
-                next: 'return',
-            },
+                next: 'return'
+            }
         ],
         'quote-props': [2, 'as-needed'],
         semi: 2,
@@ -431,8 +431,8 @@ module.exports = {
             2,
             {
                 before: false,
-                after: true,
-            },
+                after: true
+            }
         ],
         'semi-style': [2, 'last'],
         'space-before-blocks': 2,
@@ -445,6 +445,6 @@ module.exports = {
         'arrow-parens': 0,
         'babel/no-invalid-this': 0,
         'babel/quotes': [2, 'single'],
-        'babel/new-cap': 0,
-    },
+        'babel/new-cap': 0
+    }
 };
