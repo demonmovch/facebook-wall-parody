@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Transition } from 'react-transition-group';
+import { fromTo } from 'gsap';
 import { withProfile } from 'components/HOC/withProfile';
 import Composer from 'components/Composer';
 import Post from 'components/Post';
@@ -6,6 +8,7 @@ import Catcher from 'components/Catcher';
 import StatusBar from 'components/StatusBar';
 import Styles from './styles.m.css';
 import Spinner from 'components/Spinner';
+import Postman from 'components/Postman';
 import { api, TOKEN, GROUP_ID } from 'config/api';
 import { socket } from 'socket/init';
 
@@ -147,6 +150,23 @@ class Feed extends Component {
         });
     };
 
+    _animateComposerEnter = composer => {
+        fromTo(
+            composer,
+            1,
+            { opacity: 0, rotationX: 50 },
+            { opacity: 1, rotationX: 0 },
+        );
+    };
+
+    _animatePostmanEntering = postman => {
+        fromTo(postman, 2, { right: -350 }, { right: 30 });
+    };
+
+    _animatePostmanEntered = postman => {
+        fromTo(postman, 2, { right: 30 }, { right: -350 });
+    };
+
     render() {
         const { posts, isPostsFetching } = this.state;
         const postJSX = posts.map(post => {
@@ -165,7 +185,23 @@ class Feed extends Component {
             <section className={Styles.feed}>
                 <Spinner isSpinning={isPostsFetching} />
                 <StatusBar />
-                <Composer _createPost={this._createPost} />
+                <Transition
+                    appear
+                    in
+                    timeout={1000}
+                    onEnter={this._animateComposerEnter}
+                >
+                    <Composer _createPost={this._createPost} />
+                </Transition>
+                <Transition
+                    appear
+                    in
+                    timeout={3500}
+                    onEntering={this._animatePostmanEntering}
+                    onEntered={this._animatePostmanEntered}
+                >
+                    <Postman />
+                </Transition>
                 {postJSX}
             </section>
         );
