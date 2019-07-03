@@ -13,6 +13,7 @@ import StatusBar from 'components/StatusBar';
 import Styles from './styles.m.css';
 import Spinner from 'components/Spinner';
 import Postman from 'components/Postman';
+import Counter from 'components/Counter';
 import { api, TOKEN, GROUP_ID } from 'config/api';
 import { socket } from 'socket/init';
 
@@ -208,6 +209,7 @@ class Feed extends Component {
                 >
                     <Composer _createPost={this._createPost} />
                 </Transition>
+                <Counter count={postJSX.length} />
                 <Transition
                     appear
                     in
