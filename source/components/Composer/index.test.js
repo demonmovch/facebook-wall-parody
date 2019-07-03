@@ -93,7 +93,7 @@ describe('composer component:', () => {
         expect(result.state()).toEqual(initialState);
     });
 
-    test(`_submitComment should be invoked twice, _submitOnEnterSpy and _handleFormSubmit class methods should be invoked once after form submission`, () => {
+    test(`_submitComment should be invoked twice, _submitOnEnter and _handleFormSubmit class methods should be invoked once`, () => {
         expect(_submitCommentSpy).toHaveBeenCalledTimes(2);
         expect(_handleFormSubmitSpy).toHaveBeenCalledTimes(1);
         expect(_submitOnEnterSpy).toHaveBeenCalledTimes(1);
