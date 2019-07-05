@@ -28,6 +28,10 @@ const _updateCommentSpy = jest.spyOn(result.instance(), '_updateComment');
 const _submitOnEnterSpy = jest.spyOn(result.instance(), '_submitOnEnter');
 
 describe('composer component:', () => {
+    test('Composer component should correspond to its snapshot counterpart', () => {
+        expect(result).toMatchSnapshot();
+    });
+
     test('should have 1 "section" element', () => {
         expect(result.find('section')).toHaveLength(1);
     });
