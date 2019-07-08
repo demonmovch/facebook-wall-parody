@@ -1,0 +1,12 @@
+.login {
+    margin: 100px auto 0;
+    width: 300px;
+    text-align: center;
+    padding: 50px;
+    background-color: var(--paletteColor6);
+
+    & input {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+}

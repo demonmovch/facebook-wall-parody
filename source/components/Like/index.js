@@ -70,7 +70,6 @@ export default class Like extends Component {
         const likeStyles = this._getLikeStyles();
         const likersList = this._getLikersList();
         const likesDescription = this._getLikesDescription();
-        //console.log(likeStyles);
 
         return (
             <section className={Styles.like}>

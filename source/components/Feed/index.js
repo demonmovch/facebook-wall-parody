@@ -200,7 +200,6 @@ class Feed extends Component {
         return (
             <section className={Styles.feed}>
                 <Spinner isSpinning={isPostsFetching} />
-                <StatusBar />
                 <Transition
                     appear
                     in
