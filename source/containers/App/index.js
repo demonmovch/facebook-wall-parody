@@ -28,8 +28,6 @@ export default class App extends Component {
     };
 
     componentDidMount() {
-        //
-        console.log('sfsf', localStorage.getItem('loggedIn'));
         if (localStorage.getItem('loggedIn') === 'true') {
             this.login();
         }
