@@ -26,7 +26,7 @@ export default () => {
                     ? '[name].js'
                     : `js/${CHUNK_NAME_JS}`,
                 hashDigestLength: 5,
-                publicPath: '/',
+                //publicPath: '/',
             },
             optimization: {
                 nodeEnv: NODE_ENV,
