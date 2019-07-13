@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import Styles from './styles.m.css';
-import PropTypes from 'prop-types';
-import { Consumer } from 'components/HOC/withProfile';
+import { withProfile } from 'components/HOC/withProfile';
+import { func, string, number, array } from 'prop-types';
+import Like from 'components/Like';
 
+@withProfile
 export default class Post extends Component {
     static propTypes = {
-        id: PropTypes.string.isRequired,
-        comment: PropTypes.string.isRequired,
-        created: PropTypes.number.isRequired,
-        _removePost: PropTypes.func.isRequired,
+        _likePost: func.isRequired,
+        likes: array.isRequired,
+        id: string.isRequired,
+        comment: string.isRequired,
+        created: number.isRequired,
+        _removePost: func.isRequired,
     };
 
     _removePost = () => {
@@ -17,21 +21,41 @@ export default class Post extends Component {
         _removePost(id);
     };
 
+    _getCross = () => {
+        const {
+            firstName,
+            lastName,
+            currentUserFirstName,
+            currentUserLastName,
+        } = this.props;
+
+        return `${firstName} ${lastName}` ===
+            `${currentUserFirstName} ${currentUserLastName}` ? (
+            <button onClick={this._removePost} />
+        ) : null;
+    };
+
     render() {
-        const { comment, created } = this.props;
+        const {
+            comment,
+            created,
+            _likePost,
+            id,
+            likes,
+            firstName,
+            lastName,
+            avatar,
+        } = this.props;
 
         return (
-            <Consumer>
-                {context => (
-                    <section className={Styles.post}>
-                        <button onClick={this._removePost} />
-                        <img src={context.avatar} />
-                        <a>{`${context.currentUserFirstName} ${context.currentUserLastName}`}</a>
-                        <time>{moment.unix(created).format('MMMM D h:mm:ss a')}</time>
-                        <p>{comment}</p>
-                    </section>
-                )}
-            </Consumer>
+            <section className={Styles.post}>
+                {this._getCross()}
+                <img src={avatar} />
+                <a>{`${firstName} ${lastName}`}</a>
+                <time>{moment.unix(created).format('MMMM D h:mm:ss a')}</time>
+                <p>{comment}</p>
+                <Like _likePost={_likePost} id={id} likes={likes} />
+            </section>
         );
     }
 }

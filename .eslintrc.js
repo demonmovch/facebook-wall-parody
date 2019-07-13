@@ -31,7 +31,7 @@ module.exports = {
     plugins: ['react', 'jest', 'babel', 'flowtype', 'react-hooks'],
     settings: {
         react: {
-            version: '16.6.1',
+            version: '16.8.6',
         },
     },
     rules: {
@@ -81,7 +81,12 @@ module.exports = {
         'react/sort-comp': [
             2,
             {
-                order: ['static-methods', 'lifecycle', 'everything-else', 'render'],
+                order: [
+                    'static-methods',
+                    'lifecycle',
+                    'everything-else',
+                    'render',
+                ],
                 groups: {
                     lifecycle: [
                         'displayName',
@@ -102,8 +107,8 @@ module.exports = {
             },
         ],
         'react/jsx-boolean-value': 2,
-        'react/jsx-curly-spacing': [2, 'always'],
-        'react/jsx-equals-spacing': [2, 'always'],
+        'react/jsx-curly-spacing': 0,
+        'react/jsx-equals-spacing': 0,
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
         'react/jsx-no-comment-textnodes': 2,
@@ -153,7 +158,7 @@ module.exports = {
         'no-await-in-loop': 0,
         'no-compare-neg-zero': 2,
         'no-cond-assign': [2, 'always'],
-        'no-console': 0,
+        'no-console': 2,
         'no-constant-condition': 2,
         'no-control-regex': 2,
         'no-debugger': 2,
@@ -287,14 +292,7 @@ module.exports = {
                 multiline: true,
             },
         ],
-        'array-bracket-spacing': [
-            2,
-            'always',
-            {
-                arraysInArrays: false,
-                objectsInArrays: false,
-            },
-        ],
+        'array-bracket-spacing': 0,
         'block-spacing': 2,
         'brace-style': [
             2,
@@ -347,14 +345,7 @@ module.exports = {
             },
         ],
         'jsx-quotes': [2, 'prefer-single'],
-        'key-spacing': [
-            2,
-            {
-                beforeColon: false,
-                afterColon: true,
-                align: 'value',
-            },
-        ],
+        'key-spacing': 0,
         'keyword-spacing': 2,
         'lines-between-class-members': [
             'error',
@@ -417,14 +408,7 @@ module.exports = {
         'operator-assignment': 2,
         'operator-linebreak': [2, 'before'],
         'padded-blocks': [2, 'never'],
-        'padding-line-between-statements': [
-            2,
-            {
-                blankLine: 'always',
-                prev: '*',
-                next: 'return',
-            },
-        ],
+        'padding-line-between-statements': 0,
         'quote-props': [2, 'as-needed'],
         semi: 2,
         'semi-spacing': [
