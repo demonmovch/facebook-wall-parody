@@ -38,18 +38,17 @@ export default class App extends Component {
             <Catcher>
                 <Provider value={options}>
                     {this.state.loggedIn && <StatusBar logout={this.logout} />}
-                    {!this.state.loggedIn ? (
-                        <Redirect to="/login" />
-                    ) : (
-                        <Redirect to="/feed" />
-                    )}
                     <Switch>
                         <Route
-                            component={() => <Login login={this.login} />}
+                            render={props => (
+                                <Login login={this.login} {...props} />
+                            )}
                             path="/login"
                         />
+                        {!this.state.loggedIn && <Redirect to="/login" />}
                         <Route component={Feed} path="/feed" />
                         <Route component={Profile} path="/profile" />
+                        <Redirect to="/feed" />
                     </Switch>
                 </Provider>
             </Catcher>

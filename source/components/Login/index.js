@@ -8,14 +8,14 @@ export default class Login extends Component {
         event.preventDefault();
         localStorage.setItem('loggedIn', 'true');
         this.props.login();
+        this.props.history.replace('/feed');
     };
 
     render() {
         return (
             <form className={Styles.login}>
-                <input type="text" />
-                <input type="password" />
                 <button onClick={this.login}>Login</button>
+                <p>Just click "Login" button to login</p>
             </form>
         );
     }

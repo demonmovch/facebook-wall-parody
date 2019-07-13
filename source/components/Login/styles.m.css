@@ -1,12 +1,30 @@
 .login {
-    margin: 100px auto 0;
-    width: 300px;
+    margin: 150px auto 0;
+    width: 470px;
     text-align: center;
-    padding: 50px;
+    padding: 100px;
     background-color: var(--paletteColor6);
 
-    & input {
-        width: 100%;
-        margin-bottom: 50px;
+    & button {
+        font-size: 22px;
+        transition: background-color 0.2s ease-in;
+        border: 0;
+        border-radius: 2px;
+        outline: 0;
+        background-color: var(--paletteColor5);
+        color: var(--paletteColor2);
+        letter-spacing: 1px;
+        cursor: pointer;
+        padding: 25px;
+
+        &:hover {
+            background-color: var(--paletteColor7);
+        }
+    }
+
+    & p {
+        font-size: 17px;
+        margin-top: 20px;
+        color: var(--paletteColor2);
     }
 }
