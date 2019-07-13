@@ -4,7 +4,6 @@ import { Transition } from 'react-transition-group';
 import { fromTo } from 'gsap';
 import { withProfile } from 'components/HOC/withProfile';
 import { socket } from 'socket/init';
-import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
 @withProfile
@@ -36,14 +35,12 @@ export default class StatusBar extends Component {
         fromTo(statusBar, 1, { opacity: 0 }, { opacity: 1 });
     };
 
-    logout = event => {
-        event.preventDefault();
-        localStorage.setItem('loggedIn', 'false');
-        this.props.logout();
-    };
-
     render() {
-        const { currentUserFirstName, avatar } = this.props;
+        const {
+            currentUserFirstName,
+            currentUserLastName,
+            avatar,
+        } = this.props;
 
         const { online } = this.state;
 
@@ -66,14 +63,12 @@ export default class StatusBar extends Component {
                         <div>{statusMessage}</div>
                         <span />
                     </div>
-                    <Link to="/profile">
+                    <button>
                         <img src={avatar} />
                         <span>{currentUserFirstName}</span>
-                    </Link>
-                    <Link to="/feed">Feed</Link>
-                    <a href="#" onClick={this.logout}>
-                        Log out
-                    </a>
+                        &nbsp;
+                        <span>{currentUserLastName}</span>
+                    </button>
                 </section>
             </Transition>
         );
