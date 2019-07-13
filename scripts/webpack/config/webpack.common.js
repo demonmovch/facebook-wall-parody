@@ -22,9 +22,11 @@ export default () => {
             output: {
                 path: BUILD,
                 filename: IS_DEVELOPMENT ? '[name].js' : `js/${CHUNK_NAME_JS}`,
-                chunkFilename: IS_DEVELOPMENT ? '[name].js' : `js/${CHUNK_NAME_JS}`,
+                chunkFilename: IS_DEVELOPMENT
+                    ? '[name].js'
+                    : `js/${CHUNK_NAME_JS}`,
                 hashDigestLength: 5,
-                /*publicPath:       '/',*/
+                publicPath: '/',
             },
             optimization: {
                 nodeEnv: NODE_ENV,
@@ -44,6 +46,6 @@ export default () => {
         loadFonts(),
         loadImages(),
         loadSvg(),
-        connectContextReplacement()
+        connectContextReplacement(),
     );
 };
